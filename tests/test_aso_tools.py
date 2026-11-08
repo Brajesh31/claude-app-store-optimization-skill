@@ -50,8 +50,11 @@ class ASOToolTests(unittest.TestCase):
         self.assertEqual(result["sentiment_counts"]["positive"], 1)
 
     def test_launch_checklist_is_not_precompleted(self):
-        result = load("launch_checklist").main if hasattr(load("launch_checklist"), "main") else None
-        self.assertIsNotNone(result)
+        result = load("launch_checklist").build_checklist("both")
+        self.assertTrue(result["checklist"])
+        self.assertTrue(all(item["complete"] is False for item in result["checklist"]))
+        self.assertTrue(any(item["item"].startswith("[Apple]") for item in result["checklist"]))
+        self.assertTrue(any(item["item"].startswith("[Google]") for item in result["checklist"]))
 
 
 if __name__ == "__main__":
