@@ -26,3 +26,7 @@ Avoid keyword stuffing and unsupported claims. Keep the listing accurate, locali
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+## Utility scripts
+
+Added eight offline utilities under `scripts/`: keyword triage, metadata character-limit validation, competitor metadata comparison, ASO heuristic scoring, A/B sample-size estimation, localization limit checks, review sentiment triage, and launch checklist generation. These scripts work only from supplied input data. They do not fetch live store search volume, competitor rankings, or official analytics. See each script's `--help` output for usage.
