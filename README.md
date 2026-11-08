@@ -1,42 +1,96 @@
-# App Store Optimization
+# claude-app-store-optimization-skill
+
+A Claude Code skill for improving mobile app discoverability and conversion through structured App Store Optimization (ASO) workflows.
 
 ## Overview
 
-This repository contains a Claude skill focused on app store optimization (ASO). It provides a structured workflow for improving an app's store listing, discoverability, and conversion performance.
+This skill supports research, listing optimization, keyword planning, creative asset review, localization, and measurement for Apple App Store and Google Play listings.
 
-## What It Covers
+ASO work should be based on accurate product information and real performance data. Keyword repetition or unsupported claims can damage trust and listing quality.
 
-- App listing and positioning considerations.
-- Keyword and metadata planning.
-- Creative assets and conversion-focused presentation.
-- Measurement, iteration, and performance review.
+## Main Capabilities
 
-## Getting Started
+- Research relevant app keywords.
+- Review competitor positioning and metadata.
+- Optimize app titles and descriptions.
+- Plan subtitles and promotional text.
+- Evaluate category and keyword choices.
+- Improve icon, screenshot, and preview presentation.
+- Plan localization across markets.
+- Review user feedback and ratings.
+- Estimate experiment requirements.
+- Build launch and iteration checklists.
 
-1. Read `SKILL.md` to understand the workflow and scope.
-2. Install the skill in the skills directory supported by your Claude environment.
-3. Provide the app category, target audience, markets, and current listing details.
-4. Follow the skill's process to assess and improve the listing.
-5. Measure changes over time and validate impact using reliable store analytics.
+## Installation
 
-## Practical Guidance
+```bash
+git clone https://github.com/Brajesh31/claude-app-store-optimization-skill.git ~/.claude/skills/app-store-optimization
+```
 
-Avoid keyword stuffing and unsupported claims. Keep the listing accurate, localized where appropriate, and aligned with the actual app experience. Store ranking and conversion behavior can change, so review current platform guidance.
+The repository includes offline Python utilities. Review their command-line options and test requirements before use.
 
-## License
+## Usage
 
-MIT. See [LICENSE](LICENSE).
+Invoke the skill for app listing research or optimization:
 
-## Utility scripts
+```text
+/app-store-optimization
+```
 
-Added eight offline utilities under `scripts/`: keyword triage, metadata character-limit validation, competitor metadata comparison, ASO heuristic scoring, A/B sample-size estimation, localization limit checks, review sentiment triage, and launch checklist generation. These scripts work only from supplied input data. They do not fetch live store search volume, competitor rankings, or official analytics. See each script's `--help` output for usage.
+Provide the app category, target audience, target markets, current listing, product features, and available analytics.
 
-## Tests
+## Recommended ASO Workflow
 
-Run the offline utility tests with:
+1. Define the target audience and market.
+2. Review the current app listing.
+3. Research relevant keywords and competitors.
+4. Prioritize keywords by relevance and intent.
+5. Improve title, subtitle, and description.
+6. Review icon and screenshot messaging.
+7. Plan localization where it supports the target market.
+8. Validate platform character limits.
+9. Measure impressions, page views, installs, and conversion.
+10. Iterate based on reliable performance data.
+
+## Utility Scripts
+
+The repository includes offline utilities for:
+
+- Keyword triage.
+- Metadata character-limit validation.
+- Competitor metadata comparison.
+- Heuristic ASO scoring.
+- A/B test sample-size estimation.
+- Localization limit checks.
+- Review sentiment triage.
+- Launch checklist generation.
+
+These scripts operate on supplied input data. They do not fetch live store search volume, competitor rankings, or official analytics.
+
+## Running Tests
 
 ```bash
 python -m unittest discover -s tests -v
 ```
 
-The scripts are heuristic helpers over supplied input data, not live App Store or Google Play data collectors.
+## Quality Checklist
+
+- Listing claims match the actual app.
+- Keywords are relevant to user intent.
+- Titles and descriptions respect platform limits.
+- Screenshots show real product functionality.
+- Localization is reviewed by fluent speakers where possible.
+- Competitor comparisons use current, comparable data.
+- Experiments have defined metrics and decision criteria.
+- Changes are measured over a sufficient period.
+
+## Repository Contents
+
+- `SKILL.md`: Main ASO workflow.
+- `scripts/`: Offline analysis and validation utilities.
+- `tests/`: Utility tests.
+- `README.md`: ASO workflow and usage guide.
+
+## Practical Principle
+
+A higher ranking is not the only goal. Optimize for qualified discovery and installs from users who are likely to understand and value the app.
