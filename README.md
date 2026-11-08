@@ -30,3 +30,13 @@ MIT. See [LICENSE](LICENSE).
 ## Utility scripts
 
 Added eight offline utilities under `scripts/`: keyword triage, metadata character-limit validation, competitor metadata comparison, ASO heuristic scoring, A/B sample-size estimation, localization limit checks, review sentiment triage, and launch checklist generation. These scripts work only from supplied input data. They do not fetch live store search volume, competitor rankings, or official analytics. See each script's `--help` output for usage.
+
+## Tests
+
+Run the offline utility tests with:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The scripts are heuristic helpers over supplied input data, not live App Store or Google Play data collectors.
